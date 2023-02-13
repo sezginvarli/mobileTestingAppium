@@ -38,5 +38,6 @@ public class Class01 {
         //appium kütüphanesinden findElemenyById gelmedi. kalktımı acaba incelenebilir.
 
 
+        driver.findElement(By.className("abc"));
     }
 }
