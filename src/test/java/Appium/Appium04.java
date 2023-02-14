@@ -29,7 +29,7 @@ public class Appium04 {
 
         Thread.sleep(5000);
 
-        driver.findElementById("")
 
+    driver.findElementById("android:id/title").click();
     }
 }
