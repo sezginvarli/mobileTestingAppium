@@ -1,17 +1,16 @@
 package Appium;
 
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
-public class Class01 {
+public class Appium01 {
 
     @Test
     public void test() throws MalformedURLException, InterruptedException {
@@ -29,7 +28,7 @@ public class Class01 {
         desiredCapabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "UiAutomator2");
         desiredCapabilities.setCapability(MobileCapabilityType.APP, "C:\\Users\\sezgin.varli\\IdeaProjects\\mobileTestingOdeal\\src\\Apps\\Gesture Tool_1.3_Apkpure.apk");
         desiredCapabilities.setCapability(MobileCapabilityType.NO_RESET, "true");
-        AndroidDriver driver = new AndroidDriver(new URL(" http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
+        AndroidDriver <AndroidElement> driver = new AndroidDriver(new URL(" http://127.0.0.1:4723/wd/hub"), desiredCapabilities);
 
 
         Thread.sleep(5000);
@@ -38,6 +37,6 @@ public class Class01 {
         //appium kütüphanesinden findElemenyById gelmedi. kalktımı acaba incelenebilir.
 
 
-        driver.findElement(By.className("abc"));
+
     }
 }
